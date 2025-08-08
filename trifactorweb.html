@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Trinomial Factoring Calculator By Donyell</title>
+        <link rel="icon" type="image/x-icon" href="icon.ico">
+    </head>
+    <body>
+        <style>
+            #des{
+                height: 50px;
+                width: 100px;
+            }
+        </style>
+        <center>
+            <button id="des" type="button" onclick="bc()">Change coefficient b</button>
+            <button id="des" type="button" onclick="cc()">Change coefficient c</button>
+            <h1>x^2 + <b id="bco">b</b>x +  <c id="cco">c</c></h1>
+            <button id="des" type="button" onclick="fact()">FACTOR</button>
+            <h1 id="fac"></h1>
+        </center>
+    </body>
+    <script>
+
+        var b;
+        var c;
+        var n;
+
+        function bc(){
+            b = prompt("coefficient of b");
+            document.getElementById("bco").innerHTML = b;
+        }
+
+        function cc(){
+            c = prompt("coefficient of c");
+            document.getElementById("cco").innerHTML = c;
+        }
+
+        function fact(){
+            n = (-b + Math.sqrt(Math.pow(b,2) - 4*c))/-2
+            document.getElementById("fac").innerHTML = "(x + " + n + ")(x + " + c/n + ")";
+        }
+    </script>
+</html>
